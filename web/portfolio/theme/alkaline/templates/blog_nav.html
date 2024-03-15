@@ -1,0 +1,7 @@
+<header class="mb-2">
+    <a class="{{ 'underline' if active_page == 'Blog' and not (is_tag_page or is_category_page) }}" href="{{ SITEURL }}/{{ALK_BLOG_URL}}">Blog</a> |
+    <a class="{{ 'underline' if active_page == 'Categories' or is_category_page }}" href="{{ SITEURL }}/{{CATEGORIES_URL}}">Categories</a> |
+    <a class="{{ 'underline' if active_page == 'Tags' or is_tag_page }}" href="{{ SITEURL }}/{{TAGS_URL}}">Tags</a> |
+    <a class="{{ 'underline' if active_page == 'Archives' }}" href="{{ SITEURL }}/{{ARCHIVES_URL}}">Archives</a>
+    <hr />
+</header>

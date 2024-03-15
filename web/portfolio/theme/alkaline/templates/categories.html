@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME|striptags }} - Categories{% endblock %}
+
+{% set active_page = 'Categories' %}
+{% set is_blog_page = True %}
+
+{% block content %}
+{% include 'blog_nav.html' %}
+<h1>Categories on {{ SITENAME }}</h1>
+<hr />
+<ul>
+    {% for category, articles in categories|sort %}
+    <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

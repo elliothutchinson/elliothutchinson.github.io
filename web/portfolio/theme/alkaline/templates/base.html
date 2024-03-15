@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+
+<head>
+    {% block head %}
+    <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Pelican" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if SITESUBTITLE %}
+    <meta name="description" content="{{ SITESUBTITLE }}" />
+    {% endif %}
+    <link href="{{ SITEURL }}/favicon.ico" rel="icon">
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/output.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygments.css" rel="stylesheet">
+    {% if STYLESHEET_URL %}
+    <link rel="stylesheet" type="text/css" href="{{ STYLESHEET_URL }}" />
+    {% endif %}
+    {% if FEED_ALL_ATOM %}
+    <link
+        href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+        type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link
+        href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+        type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Full RSS Feed" />
+    {% endif %}
+    {% if FEED_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
+        type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
+    {% endif %}
+    {% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
+        type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_ATOM and category %}
+    <link
+        href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}"
+        type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories Atom Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_RSS and category %}
+    <link
+        href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}"
+        type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories RSS Feed" />
+    {% endif %}
+    {% if TAG_FEED_ATOM and tag %}
+    <link
+        href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}"
+        type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags Atom Feed" />
+    {% endif %}
+    {% if TAG_FEED_RSS and tag %}
+    <link
+        href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}"
+        type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags RSS Feed" />
+    {% endif %}
+    {% endblock head %}
+</head>
+
+<body class="bg-gray-800">
+
+    <!-- All Content -->
+    <div class="flex flex-col md:flex-row">
+
+        <!-- Nav -->
+        <nav class="min-h-10 md:h-auto w-full md:shrink-0 md:w-44 bg-gradient-to-b from-slate-600 to-slate-700">
+            <div>
+                <ul class="nav-list flex flex-wrap flex-row md:flex-col">
+                    {% if ALK_PROFILE_IMG_URL %}
+                    <li>
+                        <a href="{{ SITEURL }}">
+                            <img class="p-1 md:p-2 w-10 md:w-full rounded-full hover:drop-shadow-lg"
+                                src="{{ SITEURL }}/{{ ALK_PROFILE_IMG_URL }}" />
+                        </a>
+                    </li>
+                    <hr />
+                    {% endif %}
+
+                    {% if ALK_SOCIAL_IMG_URLS %}
+                    <div class="justify-center flex flex-wrap flex-row">
+                        {% for social in ALK_SOCIAL_IMG_URLS %}
+                        <a href="{{ social[1] }}">
+                            <img class="w-10 md:w-16 p-2 hover:invert" src="{{ SITEURL }}/{{ social[0] }}" />
+                        </a>
+                        {% endfor %}
+                    </div>
+                    <hr />
+                    {% endif %}
+
+                    {% if MENUITEMS %}
+                    {% for item in MENUITEMS %}
+                    <li><a class="text-nowrap md:text-wrap nav-link {{ '[&]:bg-gray-800' if item[0] == active_page }}"
+                            href="{{ SITEURL }}/{{ item[1] }}" {% if item==active_page %} aria-current="page" {% endif
+                            %}>{{ item[0] }}</a></li>
+                    {% endfor %}
+                    <hr />
+                    {% endif %}
+
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in pages %}
+                    <li><a class="text-nowrap md:text-wrap nav-link {{ '[&]:bg-gray-800' if p == page }}"
+                            href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title
+                            }}</a></li>
+                    {% endfor %}
+                    <hr />
+                    {% endif %}
+
+                    {% if ALK_DISPLAY_BLOG_LINK %}
+                    <li><a class="nav-link {{ '[&]:bg-gray-800' if active_page == 'Blog' or is_blog_page }}"
+                            href="{{ SITEURL }}/{{ ALK_BLOG_URL }}">Blog</a></li>
+                    {% endif %}
+
+                    {% if DISPLAY_CATEGORIES_ON_MENU %}
+                    {% for cat, null in categories %}
+                    <li><a class="text-nowrap md:text-wrap nav-link {{ '[&]:bg-gray-800' if cat == category }}"
+                            href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{
+                            cat }}</a></li>
+                    {% endfor %}
+                    <hr />
+                    {% endif %}
+
+                    {% if LINKS %}
+                    {% for link in LINKS %}
+                    <li><a class="text-nowrap md:text-wrap nav-link" href="{{ link[1] }}">{{ link[0] }}</a></li>
+                    {% endfor %}
+                    <hr />
+                    {% endif %}
+
+                    {% if ALK_DEBUG_URLS %}
+                    <li><a class="nav-link" href="{{ SITEURL }}/{{ ALK_DRAFTS_URL }}">Drafts</a></li>
+                    <li><a class="nav-link" href="{{ SITEURL }}/{{ ALK_PAGES_URL }}">Pages</a></li>
+                    <hr />
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="h-auto md:h-full w-full bg-gray-200">
+
+            <!-- Header -->
+            <header>
+                <h1 class="min-h-14 md:h-24 md:p-7 p-3 text-center text-xl md:text-2xl lg:text-3xl bg-gray-800">
+                    <a class="light-link" href="{{ SITEURL }}">{{ SITENAME }}
+                        {% if SITESUBTITLE %}- <span class="italic">{{ SITESUBTITLE }}</span>{% endif %}
+                    </a>
+                </h1>
+            </header>
+
+            <!-- Page Content -->
+            <main>
+                <div class="p-4 min-h-[calc(100vh-192px)]">
+                    <div class="lg:px-32 xl:px-56 2xl:px-72">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="muted-on-dark min-h-24 p-6 text-center bg-gray-800">
+                <p class="text-sm">{{ ALK_FOOTER_TEXT }}</p>
+                <p class="text-sm">
+                    <a class="light-link" href="https://github.com/elliothutchinson/alkaline">Alkaline</a> theme powered
+                    by
+                    <a class="light-link" href="https://tailwindcss.com/">Tailwind</a>,
+                    <a class="light-link" href="https://getpelican.com">Pelican</a>, &
+                    <a class="light-link" href="https://python.org">Python</a>.
+                </p>
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

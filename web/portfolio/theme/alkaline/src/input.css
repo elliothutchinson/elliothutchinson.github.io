@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.article-footer {
+    @apply mt-2;
+}
+
+.article-title {
+    @apply mb-2;
+}
+
+.highlight {
+    @apply md:max-w-xl lg:max-w-4xl overflow-auto text-xs;
+}
+
+.highlight code {
+    all: unset;
+}
+
+.light-link {
+    @apply text-gray-200 hover:text-blue-300;
+}
+
+.linenos {
+    @apply p-2;
+}
+
+.muted-on-dark {
+    @apply text-gray-400;
+}
+
+.muted-on-light {
+    @apply text-gray-600;
+}
+
+.nav-link {
+    @apply block py-2 px-4 text-sm text-gray-200 hover:text-blue-400 hover:bg-gray-800;
+}
+
+.nav-list {
+    @apply list-none ml-0;
+}
+
+.nav-list > li {
+    @apply pl-0;
+}
+
+.nav-list > hr {
+    @apply mt-0 mb-0 border-slate-500;
+}
+
+article > p {
+    @apply mt-2 mb-2;
+}
+
+@layer base {
+    a {
+        @apply text-blue-800 hover:text-blue-400;
+    }
+
+    blockquote {
+        @apply p-1 bg-slate-300;
+    }
+
+    code {
+        @apply p-1 bg-slate-300 font-mono text-xs;
+    }
+
+    h1 {
+        @apply text-3xl font-bold;
+    }
+
+    h2 {
+        @apply text-2xl font-bold;
+    }
+
+    h3 {
+        @apply text-xl font-bold;
+    }
+
+    h4 {
+        @apply text-lg font-bold;
+    }
+
+    h5 {
+        @apply text-base font-bold;
+    }
+
+    h6 {
+        @apply text-sm font-bold;
+    }
+
+    hr {
+        @apply mt-4 mb-4 border-slate-400;
+    }
+
+    li {
+        @apply pl-2;
+    }
+
+    ol {
+        @apply ml-4 list-decimal;
+    }
+
+    ul {
+        @apply ml-4 list-disc;
+    }
+}

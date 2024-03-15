@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME|striptags }} - Archives{% endblock %}
+
+{% set active_page = 'Archives' %}
+{% set is_blog_page = True %}
+
+{% block content %}
+{% include 'blog_nav.html' %}
+<h1>Archives for {{ SITENAME }}</h1>
+<hr />
+
+<dl>
+    {% for article in dates %}
+    <dt>{{ article.locale_date }}</dt>
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+    <hr />
+    {% endfor %}
+</dl>
+{% endblock %}

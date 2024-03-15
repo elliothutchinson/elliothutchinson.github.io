@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME|striptags }} - Tags{% endblock %}
+
+{% set active_page = 'Tags' %}
+{% set is_blog_page = True %}
+
+{% block content %}
+{% include 'blog_nav.html' %}
+<h1>Tags for {{ SITENAME }}</h1>
+<hr />
+<ul>
+    {% for tag, articles in tags|sort %}
+    <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}
