@@ -11,4 +11,4 @@ jobs:
       pages: "write"
       id-token: "write"
     with:
-      settings: "../../web/portfolio/content/publishconf.py"
+      settings: "../../web/portfolio/publishconf.py"
