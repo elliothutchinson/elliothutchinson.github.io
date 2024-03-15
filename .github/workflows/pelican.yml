@@ -3,6 +3,9 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+defaults:
+ run:
+  working-directory: "./web/portfolio"
 jobs:
   deploy:
     uses: "getpelican/pelican/.github/workflows/github_pages.yml@master"
@@ -11,4 +14,4 @@ jobs:
       pages: "write"
       id-token: "write"
     with:
-      settings: "web/portfolio/publishconf.py"
+      settings: "publishconf.py"
