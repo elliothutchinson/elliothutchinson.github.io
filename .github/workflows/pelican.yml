@@ -4,8 +4,8 @@ on:
     branches: ["main"]
   workflow_dispatch:
 defaults:
- run:
-  working-directory: "./web/portfolio"
+  run:
+    working-directory: "./web/portfolio"
 jobs:
   deploy:
     uses: "getpelican/pelican/.github/workflows/github_pages.yml@master"
