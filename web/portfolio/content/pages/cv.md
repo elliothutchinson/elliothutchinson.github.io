@@ -25,7 +25,7 @@ Technology enthusiast and software engineer looking for a challenge. Competent a
 🔒 OWASP and secure coding practices <br />
 🧪 Unit, integration, functional, and performance testing <br />
 🗄️ Relational SQL and NoSQL databases <br />
-⚡ REST, GraphQL, gRPC, WebSockets, SOAP <br />
+⚡ REST, GraphQL, gRPC, WebSockets <br />
 ☁️ AWS, S3, DynamoDB, SQS, Lambda, API Gateway <br />
 >
 
@@ -91,6 +91,26 @@ Mentored junior developers.
 * Ported web API for AI product recommendation service from Scala to Python that decreased maintenance efforts for ML team
 * Built Spring service for legacy CoreMedia CMS content that saved business users from recreating thousands of fragments
 
+##### Projects
+
+###### Back-to-School K-12 Teacher Lists
+Built service to retrieve back-to-school teacher lists with system to sign up and
+notify customers when schools release teacher lists with scheduler to check availability with support for fallback products and send list
+of product info and pricing to SOAP email service in Java, Spring, SQL Server, Couchbase.
+
+###### Product Search
+Migrated legacy search functionality from monolithic Endeca-based system to new microservice integrating with Bloomreach search engine written in Go.
+Added RESTful API for search with support for exposing facet, query filters, and pagination for catalog products.
+
+###### Server-Side Sponsored Products
+Built and collaborated with 3rd party to offer support for sponsored products in server-side search results to fulfill contractual product restrictions and improve performance and user experience over existing client-side implementation using Java, JSP, Struts.
+
+###### Micro App Server-Side Cache Layer
+Developed support for caching server-side requested React apps from legacy Struts app supporting arbitrary context information passed in app request with dynamic caching to transparently support future apps, and cache-clearing endpoints for CI pipeline.
+
+###### Product Info
+Developed API to acquire product data from multiple downstream services concurrently for pricing, availability, and static information with cache support and GraphQL API wrapper using Java, GraphQL, Spring, Couchbase.
+
 ---
 
 ### Software Engineer - Insight Global
@@ -108,13 +128,6 @@ Mentored junior developers.
 * Added concurrency to GraphQL data API calls for pricing, availability, and catalog info (Java, Spring) which reduced response time
 * Integrated sponsored products into server-side search results (Java, Struts) which increased conversions
 * Built micro app server-side cache support into JSP templates (Java) which decreased render time across React apps
-
-##### Projects
-
-###### Back-to-School K-12 Teacher Lists
-Built service to retrieve back-to-school teacher lists with system to sign up and
-notify customers when schools release teacher lists with scheduler to check availability with support for fallback products and send list
-of product info and pricing to SOAP email service in Java, Spring, SQL Server, Couchbase.
 
 ---
 
@@ -191,8 +204,8 @@ Automated functional tests. Mentored junior engineers.
 ## Skills
 
 * Python, Django, FastAPI, Flask, Ariadne, Pelican, Celery, SQLAlchemy, Beanie, Jinja, Locust, Pytest
-* Java, Spring Boot, Struts, Hibernate, JSP, Thymeleaf, Tomcat, JMeter, JUnit, JMockit
+* Java, Spring Boot, Hibernate, JSP, Thymeleaf, Tomcat, JMeter, JUnit, JMockit
 * JavaScript, React, React Testing Library, Jest, HTML, CSS, Tailwind
-* REST, GraphQL, gRPC, WebSockets, SOAP
+* REST, GraphQL, gRPC, WebSockets
 * AWS, Lambda, API Gateway, S3, DynamoDB, SQS, EC2
 * PostgreSQL, MongoDB, Redis, Kafka, Linux, Ubuntu, Docker, Kubernetes, Jenkins, Git

@@ -6,6 +6,7 @@ SITEURL = "http://localhost:9000"
 PORT = 9000
 BIND = "0.0.0.0"
 
+OUTPUT_PATH = "output/"
 PATH = "content"
 STATIC_PATHS = ["images", "static"]
 EXTRA_PATH_METADATA = {

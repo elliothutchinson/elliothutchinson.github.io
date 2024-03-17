@@ -4,17 +4,17 @@
 <head>
     {% block head %}
     <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="generator" content="Pelican" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% if SITESUBTITLE %}
     <meta name="description" content="{{ SITESUBTITLE }}" />
     {% endif %}
-    <link href="{{ SITEURL }}/favicon.ico" rel="icon">
-    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/output.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygments.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/favicon.ico" rel="icon" />
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/output.css" rel="stylesheet" />
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygments.css" rel="stylesheet" />
     {% if STYLESHEET_URL %}
-    <link rel="stylesheet" type="text/css" href="{{ STYLESHEET_URL }}" />
+    <link href="{{ STYLESHEET_URL }}" rel="stylesheet" />
     {% endif %}
     {% if FEED_ALL_ATOM %}
     <link

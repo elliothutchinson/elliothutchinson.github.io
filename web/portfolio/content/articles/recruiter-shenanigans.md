@@ -1,6 +1,6 @@
 title: Recruiter Shenanigans
 date: 2024-02-14
-tags: Jobs
+tags: Career
 
 A friendly reminder to my fellow job-seekers to push back against recruiter shenanigans.
 
