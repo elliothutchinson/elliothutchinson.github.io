@@ -11,7 +11,7 @@ from pelicanconf import *
 SITEURL = "https://elliothutchinson.com"
 RELATIVE_URLS = False
 
-OUTPUT_PATH = "docs/"
+OUTPUT_PATH = "../../docs/"
 DELETE_OUTPUT_DIRECTORY = True
 
 FEED_ALL_ATOM = "feeds/all.atom.xml"

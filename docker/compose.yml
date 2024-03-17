@@ -14,5 +14,6 @@ services:
       - "9001:9001"
     volumes:
       - ../web:/app/web:cached
+      - ../docs:/app/docs:cached
     env_file:
       - ./web.env
