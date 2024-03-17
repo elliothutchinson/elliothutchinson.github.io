@@ -1,3 +1,8 @@
+# submodules
+```
+git submodule update --init --recursive
+```
+
 # local
 ```
 <from web/portfolio>
