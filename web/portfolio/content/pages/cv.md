@@ -132,7 +132,7 @@ Mentored junior developers.
 ---
 
 ### Software Engineer - Brooksource
-#### Aug 2019-Jan 2020 Jacksonville, FL (Remote)
+#### Aug 2019-Jan 2020 | Jacksonville, FL (Remote)
 
 Full-stack software engineer in healthcare claims domain at Florida Blue.
 Designed and lead development for initial phase of healthcare claims controllership web app to support business leadership dashboard.
