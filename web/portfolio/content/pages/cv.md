@@ -85,6 +85,7 @@ Coordinated development with 3rd parties.
 Maintained and supported migration of legacy web apps into microservices.
 Supported production releases.
 Mentored junior developers.
+Previously a contractor at Office Depot for 19 months.
 
 * Lead 3 junior developers through various eCommerce projects that provided technical insight and mentorship
 * Migrated legacy search engine from Endeca to Bloomreach (Java, Go) which increased search responsiveness and relevance
