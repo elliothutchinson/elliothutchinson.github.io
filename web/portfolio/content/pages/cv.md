@@ -121,7 +121,7 @@ Developed API to acquire product data from multiple downstream services concurre
 ### Software Engineer - Brooksource
 #### Aug 2019-Jan 2020 | Jacksonville, FL (Remote)
 
-Full-stack software engineer in healthcare claims domain at Florida Blue.
+Full-stack software engineer in healthcare claims domain at *Florida Blue*.
 Designed and lead development for initial phase of healthcare claims controllership web app to support business leadership dashboard.
 Developed React components, RESTful APIs, and backing stored procedures providing claim reporting for metrics, drilldowns, URL sharing, and Excel export, and support for alert subscriptions and dashboard customization.
 
@@ -131,9 +131,9 @@ Developed React components, RESTful APIs, and backing stored procedures providin
 ---
 
 ### Software Engineer - Insight Global
-#### Sept 2018-Aug 2019 | Boca Raton, FL
+#### Mar 2018-Aug 2019 | Boca Raton, FL
 
-Designed technical solutions for microservice architecture in agile environment for enterprise-level ecommerce at Office Depot.
+Designed technical solutions for microservice architecture in agile environment for enterprise-level ecommerce at *Office Depot*.
 Implemented and deployed new microservices and provided code coverage with unit and performance tests.
 Incorporated caching mechanisms and concurrent designs for performance optimization.
 Coordinated development with 3rd parties.
@@ -145,12 +145,7 @@ Mentored junior developers.
 * Wrote internal tool for retail store location Google Review metrics (Java, OAuth) that enabled faster customer feedback response
 * Introduced dev team to AAA test pattern for unit tests (JUnit) that decreased efforts and improved coverage and maintainability
 
----
-
-### Software Engineer - Insight Global
-#### Mar 2018-Aug 2018 | Boca Raton, FL
-
-SDET/automation engineer in agile environment at NextEra Energy.
+SDET/automation engineer in agile environment at *NextEra Energy*.
 Developed enhancements for a desktop energy trading application.
 Developed testing libraries for a multi-project test framework.
 Developed automated unit and functional tests.
