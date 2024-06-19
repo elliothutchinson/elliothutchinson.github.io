@@ -99,9 +99,7 @@ Previously a contractor at Office Depot.
 ##### Projects
 
 ###### Back-to-School K-12 Teacher Lists
-Built service to retrieve back-to-school teacher lists with system to sign up and
-notify customers when schools release teacher lists with scheduler to check availability with support for fallback products and send list
-of product info and pricing to SOAP email service in Java, Spring, SQL Server, Couchbase, JUnit.
+Built service to retrieve back-to-school teacher lists with system to sign up and notify customers when schools release teacher lists with scheduler to check availability with support for fallback products and send list of product info and pricing to SOAP email service and API for prior year list in Java, Spring, SQL Server, Couchbase, JUnit.
 
 ###### Product Search
 Migrated legacy search functionality from monolithic Endeca-based system to new microservice integrating with Bloomreach search engine written in Go.
@@ -114,7 +112,7 @@ Built and collaborated with 3rd party to offer support for sponsored products in
 Developed support for caching server-side requested React apps from legacy Struts app supporting arbitrary context information passed in app request with dynamic caching to transparently support future apps, and cache-clearing endpoints for CI pipeline.
 
 ###### Product Info
-Developed API to acquire product data from multiple downstream services concurrently for pricing, availability, and static information with cache support and GraphQL API wrapper using Java, GraphQL, Spring, Couchbase.
+Developed API to acquire product data from multiple downstream services concurrently for pricing, availability, and static information with cache support and GraphQL API wrapper using Java, GraphQL, Spring, Couchbase, Ehcache, JUnit.
 
 ---
 
