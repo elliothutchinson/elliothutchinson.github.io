@@ -173,7 +173,6 @@ Automated functional tests. Mentored junior engineers.
 ## Education
 
 ### BS, Software Engineering - Florida Gulf Coast University
-#### Aug 2010-May 2015 | Ft Myers, FL
 
 * Major GPA 3.8
 * OOP, Architecture, Testing, Databases, Data Structures & Algorithms, OS, Networks, Discrete Math, Stats, Calc II, Physics II
@@ -184,7 +183,7 @@ Automated functional tests. Mentored junior engineers.
 ## Skills
 
 * Python, Django, FastAPI, Flask, Ariadne, Pelican, Celery, SQLAlchemy, Beanie, Jinja, Locust, Pytest
-* Java, Spring Boot, Hibernate, JSP, Thymeleaf, Tomcat, JMeter, JUnit, JMockit
+* Java, Spring Boot, Hibernate, JSP, Thymeleaf, Tomcat, JMeter, JUnit
 * JavaScript, React, React Testing Library, Jest, HTML, CSS, Tailwind
 * REST, GraphQL, gRPC, WebSockets
 * AWS, Lambda, API Gateway, S3, DynamoDB, SQS, EC2
