@@ -62,10 +62,12 @@ LINKS = (
 
 # Alkaline theme settings
 ALK_PROFILE_IMG_URL = "images/me.jpg"
-ALK_FOOTER_TEXT = "© 2016 - 2024 Elliot Hutchinson"
+ALK_FOOTER_TEXT = "© 2016 - 2025 Elliot Hutchinson"
+ALK_DISPLAY_CREDITS = True
 ALK_DEBUG_URLS = False
 ALK_DISPLAY_BLOG_LINK = True
 ALK_BLOG_URL = "blog"
+ALK_BLOG_URL_NAME = "Blog"
 ALK_DRAFTS_URL = "drafts"
 ALK_PAGES_URL = "pages"
 ALK_GITHUB_URL = "https://github.com/elliothutchinson"
